@@ -14,10 +14,10 @@ if [ "$TRAVIS_BRANCH" == "master" ] || [ "$TRAVIS_BRANCH" == "develop" ] || [ "$
     wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.2.0.1873-linux.zip
     wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
 
-    unzip sonar-scanner-cli-3.3.0.1492-linux.zip
+    unzip sonar-scanner-cli-4.2.0.1873-linux.zip
     unzip build-wrapper-linux-x86.zip
 
-    cd sonar-scanner-3.3.0.1492-linux/bin
+    cd sonar-scanner-4.2.0.1873-linux/bin
     chmod +x sonar-scanner
     cd ../..
 
@@ -33,7 +33,7 @@ if [ "$TRAVIS_BRANCH" == "master" ] || [ "$TRAVIS_BRANCH" == "develop" ] || [ "$
     /sonar/build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir bw-outputs ./sonar-build.sh
 
     echo "RUNNING SONARCLOUD SCANNER"
-    /sonar/sonar-scanner-3.3.0.1492-linux/bin/sonar-scanner \
+    /sonar/sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner \
     -Dsonar.login=$SONAR_TOKEN -Dsonar.branch.name=$TRAVIS_BRANCH \
     -X
 

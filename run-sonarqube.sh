@@ -11,7 +11,7 @@ if [ "$TRAVIS_BRANCH" == "master" ] || [ "$TRAVIS_BRANCH" == "develop" ] || [ "$
 
     mkdir /sonar
     cd /sonar
-    wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
+    wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.2.0.1873-linux.zip
     wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
 
     unzip sonar-scanner-cli-3.3.0.1492-linux.zip

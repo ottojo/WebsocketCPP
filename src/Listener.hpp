@@ -24,7 +24,7 @@ namespace util {
          * @param listener a functor which should get called
          */
         template<typename T>
-        void operator()(T &&listener) const;
+        void subscribe(T &&listener) const;
 
         /**
          * Call all listeners
@@ -59,7 +59,7 @@ namespace util {
 
     template<typename... Args>
     template<typename T>
-    void Listener<Args...>::operator()(T &&listener) const {
+    void Listener<Args...>::subscribe(T &&listener) const {
         this->listeners.emplace_back(std::forward<T>(listener));
     }
 }

@@ -86,7 +86,7 @@ namespace network {
 
         static int globalHandler(lws *websocket, lws_callback_reasons reasons, void*, void *data,
                                  std::size_t len);
-        static void sendImpl(std::string text, lws *wsi);
+        static void sendImpl(const std::string &text, lws *wsi);
         static std::map<lws_context*, WebSocketClient*> instances;
     };
 }

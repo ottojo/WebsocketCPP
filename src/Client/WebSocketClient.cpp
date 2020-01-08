@@ -135,7 +135,7 @@ namespace network {
         return 0;
     }
 
-    void WebSocketClient::sendImpl(std::string text, lws *wsi) {
+    void WebSocketClient::sendImpl(const std::string &text, lws *wsi) {
         if (wsi != nullptr) {
             std::vector<unsigned char> buf;
             buf.resize(text.length() + LWS_PRE);

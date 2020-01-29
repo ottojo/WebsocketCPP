@@ -26,7 +26,7 @@ int main() {
         std::cout << s << std::endl;
     };
 
-    client.receiveListener(handler);
+    client.receiveListener.subscribe(handler);
 
     while (true) {
         std::this_thread::sleep_for(1s);

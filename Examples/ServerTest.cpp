@@ -18,7 +18,7 @@ void newConnectionHandler(std::shared_ptr<network::Connection> connection) {
     std::cout << "New Connection!" << std::endl;
     connection->send("Pong");
 
-    connection->receiveListener([connection](std::string text){
+    connection->receiveListener.subscribe([connection](std::string text) {
         std::cout << "Received: " << text << std::endl;
         connection->send("Echo");
     });
@@ -26,7 +26,7 @@ void newConnectionHandler(std::shared_ptr<network::Connection> connection) {
 
 int main() {
     network::WebSocketServer server{8080, "http-only"};
-    server.connectionListener(newConnectionHandler);
+    server.connectionListener.subscribe(newConnectionHandler);
     std::cout << "Started on port 8080" << std::endl;
     while (true) {
 

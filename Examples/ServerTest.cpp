@@ -14,7 +14,7 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wmissing-noreturn"
 
-void newConnectionHandler(std::shared_ptr<network::Connection> connection) {
+void newConnectionHandler(std::shared_ptr<websocket::network::Connection> connection) {
     std::cout << "New Connection!" << std::endl;
     connection->send("Pong");
 
@@ -25,7 +25,7 @@ void newConnectionHandler(std::shared_ptr<network::Connection> connection) {
 }
 
 int main() {
-    network::WebSocketServer server{8080, "http-only"};
+    websocket::network::WebSocketServer server{8080, "http-only"};
     server.connectionListener.subscribe(newConnectionHandler);
     std::cout << "Started on port 8080" << std::endl;
     while (true) {

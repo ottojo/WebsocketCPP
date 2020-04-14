@@ -19,7 +19,7 @@
 
 #include "Listener.hpp"
 
-namespace network {
+namespace websocket::network {
     using AsyncCallList = std::pair<std::list<std::function<void()>>, std::mutex>;
 
     /**

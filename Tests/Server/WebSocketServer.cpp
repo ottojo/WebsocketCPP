@@ -7,6 +7,6 @@
 #endif
 
 TEST(WebSocketServer, ConstructDeconstruct) {
-    EXPECT_NO_THROW((network::WebSocketServer{8080, "abc"}));
-    EXPECT_NO_THROW((network::WebSocketServer{8081, "http-only"}));
+    EXPECT_NO_THROW((websocket::network::WebSocketServer{8080, "abc"}));
+    EXPECT_NO_THROW((websocket::network::WebSocketServer{8081, "http-only"}));
 }

@@ -11,7 +11,7 @@
 #include <list>
 #include <functional>
 
-namespace util {
+namespace websocket::util {
     /**
      * Implements a generic event listener with arbitrary messages.
      * @tparam Args the type(s) of the message

@@ -8,5 +8,5 @@
 #endif
 
 TEST(WebSocketClient, ConstructDestruct) {
-    EXPECT_NO_THROW((network::WebSocketClient{"localhost", "/", 8080, "test"}));
+    EXPECT_NO_THROW((websocket::network::WebSocketClient{"localhost", "/", 8080, "test"}));
 }

@@ -11,7 +11,7 @@
 
 static constexpr auto BUF_SIZE = 8000000;
 
-namespace network {
+namespace websocket::network {
     std::map<lws_context*, WebSocketClient*> WebSocketClient::instances;
 
     WebSocketClient::WebSocketClient(std::string server, std::string path,

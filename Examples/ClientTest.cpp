@@ -20,7 +20,7 @@
 int main() {
     using namespace std::chrono_literals;
 
-    network::WebSocketClient client{"localhost", "/", 8080, "http-only"};
+    websocket::network::WebSocketClient client{"localhost", "/", 8080, "http-only"};
 
     auto handler = [](std::string s){
         std::cout << s << std::endl;

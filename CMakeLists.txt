@@ -20,13 +20,13 @@ endif ()
 project(SopraNetwork VERSION 0.0.1 DESCRIPTION "Network for SoPra")
 
 set(SOURCES
-        ${CMAKE_SOURCE_DIR}/src/Server/WebSocketServer.cpp
-        ${CMAKE_SOURCE_DIR}/src/Server/Connection.cpp
-        ${CMAKE_SOURCE_DIR}/src/Client/WebSocketClient.cpp)
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Server/WebSocketServer.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Server/Connection.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Client/WebSocketClient.cpp)
 
 set(LIBS websockets pthread)
 
-include_directories(${CMAKE_SOURCE_DIR}/src)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 target_link_libraries(${PROJECT_NAME} ${LIBS})
 

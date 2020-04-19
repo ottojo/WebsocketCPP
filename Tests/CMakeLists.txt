@@ -1,6 +1,7 @@
 project(Tests)
 
 enable_testing()
+include_directories(..)
 find_package(GTest)
 if (GTest_FOUND)
     include_directories(${GTEST_INCLUDE_DIR})

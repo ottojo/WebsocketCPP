@@ -4,8 +4,8 @@ include_directories(${CMAKE_SOURCE_DIR})
 
 project(ServerTest)
 add_executable(${PROJECT_NAME} ServerTest.cpp ${SOURCES})
-target_link_libraries(${PROJECT_NAME} ${LIBS})
+target_link_libraries(${PROJECT_NAME} ${LIBS} SopraNetwork)
 
 project(ClientTest)
 add_executable(${PROJECT_NAME} ClientTest.cpp ${SOURCES})
-target_link_libraries(${PROJECT_NAME} ${LIBS})
+target_link_libraries(${PROJECT_NAME} ${LIBS} SopraNetwork)

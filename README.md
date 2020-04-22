@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/SoPra-Team-10/Network.svg?branch=master)](https://travis-ci.org/SoPra-Team-10/Network)
+[![Build Status](https://travis-ci.org/SoPra-Team-17/WebsocketCPP.svg?branch=master)](https://travis-ci.org/SoPra-Team-17/WebsocketCPP)
 # Network
 The C++ Websockets component.
 
@@ -87,4 +87,4 @@ and linked using
 ```
 
 ## SonarQube Analyse
-Das Analyseergebniss von SonarQube ist [hier auf SonarCloud](https://sonarcloud.io/dashboard?id=SoPra-Team-10_Network) zu finden.
+Das Analyseergebnis von SonarQube ist [hier auf SonarCloud](https://sonarcloud.io/dashboard?id=SoPra-Team-17_WebsocketCPP) zu finden.

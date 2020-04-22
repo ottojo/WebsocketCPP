@@ -30,6 +30,10 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 target_link_libraries(${PROJECT_NAME} ${LIBS})
 
+target_include_directories(${PROJECT_NAME}
+        PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
+
 # Installation via make install
 include(GNUInstallDirs)
 set_target_properties(${PROJECT_NAME} PROPERTIES

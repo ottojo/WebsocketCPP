@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
+project(SopraNetwork VERSION 0.0.1 DESCRIPTION "Network for SoPra")
 
 # Build options
 set(CMAKE_CXX_STANDARD 17)
@@ -7,9 +8,8 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif(NOT CMAKE_BUILD_TYPE)
 
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wpedantic -march=native -mtune=native")
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wpedantic -march=native -mtune=native")
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -fno-omit-frame-pointer")
     message("Building for debug")
 else()
     set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -O3")
@@ -17,7 +17,6 @@ else()
 endif ()
 
 # Building
-project(SopraNetwork VERSION 0.0.1 DESCRIPTION "Network for SoPra")
 
 set(SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Server/WebSocketServer.cpp

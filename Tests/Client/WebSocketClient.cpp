@@ -3,7 +3,7 @@
 #ifdef USE_INSTALLED_LIB
 #include <SopraNetwork/WebSocketClient.hpp>
 #else
-#include <src/Client/WebSocketClient.hpp>
+#include <Client/WebSocketClient.hpp>
 
 #endif
 

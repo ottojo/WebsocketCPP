@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
 #ifdef USE_INSTALLED_LIB
-#include <SopraNetwork/WebSocketClient.hpp>
+#include <SopraNetwork/Client/WebSocketClient.hpp>
 #else
 #include <src/Client/WebSocketClient.hpp>
 

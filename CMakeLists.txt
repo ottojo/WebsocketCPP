@@ -41,7 +41,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
         PUBLIC_HEADER
         "src/Server/WebSocketServer.hpp;src/Server/Connection.hpp;src/Listener.hpp;src/Client/WebSocketClient.hpp")
 install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_LIBDIR})
-install(DIRECTORY "${CMAKE_SOURCE_DIR}/"
+install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/"
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}
         FILES_MATCHING PATTERN "*.hpp"
         )

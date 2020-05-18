@@ -4,15 +4,15 @@ project(SopraNetwork VERSION 0.0.1 DESCRIPTION "Network for SoPra")
 # Build options
 set(CMAKE_CXX_STANDARD 17)
 
-if(NOT CMAKE_BUILD_TYPE)
+if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
-endif(NOT CMAKE_BUILD_TYPE)
+endif (NOT CMAKE_BUILD_TYPE)
 
 set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wpedantic -march=native -mtune=native")
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     message("Building for debug")
-else()
-    set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -O3")
+else ()
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
     message("Building for release")
 endif ()
 
@@ -40,11 +40,10 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
         SOVERSION 1
         PUBLIC_HEADER
         "src/Server/WebSocketServer.hpp;src/Server/Connection.hpp;src/Listener.hpp;src/Client/WebSocketClient.hpp")
-install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_LIBDIR})
-install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/src/"
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/SopraNetwork
-        FILES_MATCHING PATTERN "*.hpp"
-        )
+install(TARGETS ${PROJECT_NAME}
+        DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        PUBLIC_HEADER
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/SopraNetwork)
 
 add_subdirectory(Tests)
 add_subdirectory(Examples)

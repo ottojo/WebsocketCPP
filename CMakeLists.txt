@@ -37,13 +37,11 @@ target_include_directories(${PROJECT_NAME}
 include(GNUInstallDirs)
 set_target_properties(${PROJECT_NAME} PROPERTIES
         VERSION ${PROJECT_VERSION}
-        SOVERSION 1
-        PUBLIC_HEADER
-        "src/Server/WebSocketServer.hpp;src/Server/Connection.hpp;src/Listener.hpp;src/Client/WebSocketClient.hpp")
-install(TARGETS ${PROJECT_NAME}
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        PUBLIC_HEADER
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/SopraNetwork)
+        SOVERSION 1)
+install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_LIBDIR})
+install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/src/"
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/SopraNetwork
+        FILES_MATCHING PATTERN "*.hpp")
 
 add_subdirectory(Tests)
 add_subdirectory(Examples)
